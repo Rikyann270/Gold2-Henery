@@ -61,7 +61,7 @@ export default function AboutPage() {
             <ul className="check-list" style={{ marginTop: "1.5rem" }}>
               <li>Direct allocation with no counterparty risk</li>
               <li>Accredited refiners adhering to LBMA Responsible Gold Guidance</li>
-              <li>Discrete, armored logistics with full Lloyd&apos;s transit insurance</li>
+              <li>Discrete, armored logistics with full comprehensive transit insurance</li>
               <li>Transparent live pricing tied directly to interbank spot markets</li>
             </ul>
           </Reveal>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 Global presence, <span className="gold-text">local execution</span>
               </h2>
               <p className="section-sub">
-                With regional offices across major precious-metals crossroads, our clients benefit from seamless international liquidity and multi-jurisdiction storage.
+                With regional offices across major precious-metals crossroads, our clients benefit from seamless international execution and multi-jurisdiction storage.
               </p>
             </div>
           </Reveal>

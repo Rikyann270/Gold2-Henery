@@ -20,12 +20,12 @@ const DETAILED_FAQS = [
     a: "Yes, 100%. Whether you take physical delivery or elect for vault custody, you hold unencumbered legal title to the specific, serialized bars. Your assets are never pooled, loaned, or leveraged.",
   },
   {
-    q: "How does the buy-back guarantee work in practice?",
-    a: "When you wish to liquidate, contact our trading desk with your bar serial number. We quote you a live repurchase price based on the interbank spot price. Upon physical receipt and assay verification at any of our global hubs, settlement is wired promptly.",
-  },
-  {
     q: "Can I inspect my vault storage in person?",
     a: "Yes. Clients storing gold in our partner facilities in Zurich, Dubai, or London may schedule physical audit visits with 48 hours notice in accordance with vault security protocols.",
+  },
+  {
+    q: "How does allocated ownership work?",
+    a: "Every bar purchased through our network is physical, individually numbered, fully allocated, and 100% owned by you. You receive the specific serial numbers and certified assay logs immediately upon settlement.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function FAQPage() {
             Frequently Asked <span className="gold-text">Questions</span>
           </h1>
           <p className="subpage-lead">
-            Transparent guidance on bar authentication, ordering, settlement, armored shipping, and liquidity guarantees.
+            Transparent guidance on bar authentication, ordering, settlement, armored shipping, and allocated custody.
           </p>
         </div>
       </section>

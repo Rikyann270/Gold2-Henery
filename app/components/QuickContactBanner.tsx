@@ -4,15 +4,15 @@ import { useState } from "react";
 import { SITE } from "../data";
 
 const CHIPS = [
-  { id: "100 g", label: "100 g Bar" },
-  { id: "250 g", label: "250 g Cast" },
-  { id: "1 kg", label: "1 kg Sovereign" },
-  { id: "Bulk order", label: "Bulk Order" },
+  { id: "1 kg", label: "1 kg Bar" },
+  { id: "12.5 kg", label: "12.5 kg Ingot" },
+  { id: "1 tn", label: "1 tn Reserve" },
+  { id: "10 tn", label: "10 tn Allocation" },
   { id: "Vault storage", label: "Vault Storage" },
 ];
 
 export default function QuickContactBanner() {
-  const [selected, setSelected] = useState("100 g");
+  const [selected, setSelected] = useState("1 kg");
 
   return (
     <div className="contact-ribbon-card">
@@ -26,7 +26,7 @@ export default function QuickContactBanner() {
           Ready to buy <span className="contact-ribbon-gold">gold?</span>
         </h2>
         <p className="contact-ribbon-desc">
-          Lock live interbank spot pricing with guaranteed buyback &amp; insured delivery.
+          Lock live interbank spot pricing with allocated custody &amp; insured delivery.
         </p>
         <div className="contact-ribbon-direct">
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

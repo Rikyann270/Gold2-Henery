@@ -8,7 +8,7 @@ import { SITE } from "../data";
 export const metadata: Metadata = {
   title: `Gold Bars Catalog | ${SITE.name}`,
   description:
-    "Explore our complete range of certified investment gold bars from 1g to 1kg. Minted, cast, and institutional bars with instant spot pricing.",
+    "Explore our complete range of certified investment gold bars from 1 kg to 10 tn. Kilogram, multi-kilo, and institutional reserve allocations with instant spot pricing.",
 };
 
 export default function ProductsPage() {
@@ -68,9 +68,9 @@ export default function ProductsPage() {
                 <div className="feature-icon">
                   <Icon name="scale" />
                 </div>
-                <h3>Tamper-Proof CertiCard</h3>
+                <h3>Tamper-Proof CertiCard &amp; Ingot Seals</h3>
                 <p>
-                  Fractional and minted bars (1g - 100g) are hermetically encased in serial-matched tamper-evident packaging with assayer signature.
+                  Kilogram bars and institutional tranches (1 kg – 10 tn) are hermetically encased or serialized with assayer signatures and verifiable audit ledgers.
                 </p>
               </div>
             </Reveal>
@@ -78,11 +78,11 @@ export default function ProductsPage() {
             <Reveal delay={200}>
               <div className="feature">
                 <div className="feature-icon">
-                  <Icon name="refresh" />
+                  <Icon name="vault" />
                 </div>
-                <h3>Guaranteed Buy-Back</h3>
+                <h3>Segregated Vault Custody</h3>
                 <p>
-                  Immediate liquidity whenever you need it. We offer instant repurchasing linked transparently to the global gold spot price.
+                  Direct unencumbered legal title in Zurich, Dubai, or London. Your exact serial numbers are held segregated with regular independent audits.
                 </p>
               </div>
             </Reveal>

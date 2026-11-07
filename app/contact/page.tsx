@@ -91,13 +91,13 @@ export default function ContactPage() {
                   </label>
                   <label>
                     Interested In
-                    <select name="interest" defaultValue="100 g">
+                    <select name="interest" defaultValue="1 kg">
                       {PRODUCTS.map((p) => (
                         <option key={p.weight}>{p.weight} ({p.name})</option>
                       ))}
-                      <option>Bulk Order (Multiple Kilograms)</option>
-                      <option>Allocated Vault Storage</option>
-                      <option>Liquidation / Buy-Back Consultation</option>
+                      <option>Institutional Tranche (1 tn – 10 tn)</option>
+                      <option>Allocated Sovereign Vault Custody</option>
+                      <option>Direct Custodial Transfer Consultation</option>
                     </select>
                   </label>
                 </div>

@@ -24,11 +24,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: `${SITE.name} | Buy Certified Investment Gold Bars Online`,
-  description: `Buy certified investment gold bars from 1g to 1kg. Insured worldwide delivery, secure vault storage and a buy-back guarantee from ${SITE.name}.`,
+  description: `Buy certified investment gold bars from 1 kg to 10 tn. Insured worldwide delivery and secure vault storage from ${SITE.name}.`,
   openGraph: {
     title: `${SITE.name} | Certified Gold Bars`,
     description:
-      "Certified investment gold bars with insured delivery, secure vaulting and buy-back guarantee.",
+      "Certified investment gold bars with insured delivery and secure allocated vault custody.",
     type: "website",
   },
 };

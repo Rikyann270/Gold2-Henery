@@ -20,7 +20,7 @@ const howItWorksSteps: WheelCarouselItem[] = [
   {
     label: "01. Choose Your Bars",
     image: "/images/slider_images/1c744bae-5415-43db-9488-461140ce50c5.webp",
-    imageAlt: "Select investment gold bars from 1g to 1kg and lock live spot price",
+    imageAlt: "Select investment gold bars from 1 kg to 10 tn and lock live spot price",
   },
   {
     label: "02. Verify & Settle",
@@ -35,7 +35,7 @@ const howItWorksSteps: WheelCarouselItem[] = [
   {
     label: "04. Hold or Vault",
     image: "/images/slider_images/c919eed0-7830-442d-8568-7462b0f71ec5.webp",
-    imageAlt: "Keep physical gold at home, allocate in our insured vault, or liquidate any time",
+    imageAlt: "Keep physical gold, or allocate in our high-security insured vaults",
   },
 ];
 
@@ -52,7 +52,7 @@ const PROTECTION_PILLARS = [
   {
     icon: "truck",
     title: "Discreet Insured Worldwide Delivery",
-    text: "Full-value Lloyd's of London underwriters coverage from dispatch to handover. Armored logistics with encrypted signature verification.",
+    text: "Full-value comprehensive underwriters transit coverage from dispatch to handover. Armored logistics with encrypted signature verification.",
     stat: "100%",
     statLabel: "Insured",
     href: "/process",
@@ -66,15 +66,6 @@ const PROTECTION_PILLARS = [
     statLabel: "Custody",
     href: "/process",
     linkText: "Vault security protocol",
-  },
-  {
-    icon: "refresh",
-    title: "Guaranteed Liquidity & Buy-Back",
-    text: "Liquidity on your terms. We provide guaranteed repurchase quotes directly pegged to the live interbank spot price whenever you decide to sell.",
-    stat: "Live",
-    statLabel: "Spot",
-    href: "/process",
-    linkText: "Liquidation policy",
   },
 ];
 
@@ -100,8 +91,8 @@ export default function Home() {
           <p className="hero-script">The art of</p>
           <h1 id="hero-title">Owning gold</h1>
           <p className="lead">
-            Certified gold bars from 1g to 1kg. Insured delivery, secure
-            vault storage and a buy-back guarantee.
+            Certified gold bars from 1 kg to 10 tn. Insured delivery, secure
+            vault storage and allocated sovereign custody.
           </p>
           <div className="hero-actions">
             <Link href="/products" className="btn btn-gold" id="hero-explore">

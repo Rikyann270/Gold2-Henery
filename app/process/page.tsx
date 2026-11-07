@@ -74,7 +74,7 @@ export default function ProcessPage() {
               </p>
               <ul className="check-list" style={{ marginTop: "1.5rem" }}>
                 <li><strong>100% Allocated:</strong> Your exact serial numbers remain solely yours, never pooled or loaned.</li>
-                <li><strong>All-Risk Insurance:</strong> Fully insured through Lloyd&apos;s of London underwriters at full replacement market value.</li>
+                <li><strong>All-Risk Insurance:</strong> Fully insured with comprehensive coverage at full replacement market value.</li>
                 <li><strong>Independent Auditing:</strong> Regular physical audits conducted by tier-one international accounting firms.</li>
                 <li><strong>On-Demand Delivery:</strong> Request physical extraction and armored courier dispatch whenever desired.</li>
               </ul>
