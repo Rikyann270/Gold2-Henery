@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./components/Reveal";
 import SectionVideoBg from "./components/SectionVideoBg";
 import QuickContactBanner from "./components/QuickContactBanner";
 import Icon from "./components/Icon";
+import JsonLd from "./components/JsonLd";
 import {
   WheelCarousel,
   type WheelCarouselItem,
@@ -15,6 +17,25 @@ import {
   SITE,
   STATS,
 } from "./data";
+import {
+  buildFaqJsonLd,
+  buildHowToJsonLd,
+  buildPageMetadata,
+  buildProductsJsonLd,
+} from "./seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: `${SITE.name} | Certified Physical Gold Bars (1 kg to 10 tn)`,
+  description:
+    "Buy LBMA-certified physical investment gold bars from 1 kg to 10 metric tonnes (10,000 kg) with Kibali Gold Enterprise (kibaligoldenterprise.com). Insured worldwide delivery and allocated Tier-IV vault custody.",
+  path: "/",
+  keywords: [
+    "buy physical gold 1kg to 10tn",
+    "sovereign gold bullion dealer",
+    "LBMA certified gold bars",
+    "allocated gold vault storage",
+  ],
+});
 
 const howItWorksSteps: WheelCarouselItem[] = [
   {
@@ -72,6 +93,9 @@ const PROTECTION_PILLARS = [
 export default function Home() {
   return (
     <main id="top">
+      <JsonLd data={buildProductsJsonLd()} />
+      <JsonLd data={buildFaqJsonLd(FAQ, "/")} />
+      <JsonLd data={buildHowToJsonLd()} />
       {/* HERO */}
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-stage" aria-hidden="true">

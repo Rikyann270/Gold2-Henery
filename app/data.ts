@@ -6,9 +6,12 @@
 
 export const SITE = {
   name: "Kibali Gold Market",
-  tagline: "Certified gold bars. Delivered or vaulted.",
-  email: "sales@kibaligoldmarket.com",
-  phone: "+000 000 000 000",
+  legalName: "Kibali Gold Enterprise",
+  domain: "kibaligoldenterprise.com",
+  url: "https://kibaligoldenterprise.com",
+  tagline: "Certified gold bars from 1 kg to 10 tn. Delivered or vaulted.",
+  email: "sales@kibaligoldenterprise.com",
+  phone: "+243 864 556 858",
 };
 
 export const NAV = [

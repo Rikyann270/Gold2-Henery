@@ -2,13 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
+import JsonLd from "../components/JsonLd";
 import { NEWS, SITE } from "../data";
+import {
+  buildBreadcrumbJsonLd,
+  buildInsightsJsonLd,
+  buildPageMetadata,
+} from "../seo";
 
-export const metadata: Metadata = {
-  title: `Market Insights & Gold Research | ${SITE.name}`,
+export const metadata: Metadata = buildPageMetadata({
+  title: "Precious Metals Market Insights & Institutional Gold Research",
   description:
-    "Expert perspectives on physical gold, central bank reserves, currency devaluation hedging, and sovereign precious metals wealth preservation.",
-};
+    "Institutional perspectives on physical gold allocations (1 kg to 10 tn), central bank reserve accumulation, currency devaluation hedging, and allocated vs. unallocated bullion title.",
+  path: "/insights",
+  type: "article",
+  keywords: [
+    "physical gold market research",
+    "central bank gold accumulation",
+    "allocated vs unallocated gold",
+    "institutional gold investment analysis",
+  ],
+});
 
 const EXTRA_ARTICLES = [
   {
@@ -32,6 +46,13 @@ export default function InsightsPage() {
 
   return (
     <main id="top" className="subpage-content">
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Market Insights", path: "/insights" },
+        ])}
+      />
+      <JsonLd data={buildInsightsJsonLd(allArticles)} />
       {/* SUBPAGE HERO */}
       <section className="subpage-hero" aria-labelledby="insights-page-title">
         <div className="container">

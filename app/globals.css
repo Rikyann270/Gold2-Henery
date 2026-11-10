@@ -3529,255 +3529,1149 @@ a {
   }
 }
 
-
-/* ---------- Products: 3D gold bar configurator ---------- */
-.gp-page {
+/* ---------- Contact Page (Dark Horizon Arc & Stacked Cards Design) ---------- */
+.kc-page {
   position: relative;
   min-height: 100vh;
-  width: 100%;
+  background: #050505;
+  color: #f5f0e7;
   overflow: hidden;
-  background: #000;
-  display: grid;
-  place-items: center;
-  padding: 7rem 1.25rem 3rem;
+  padding-top: 7.2rem;
+  padding-bottom: 4rem;
 }
 
-.gp-bg-video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.gp-bg-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 30% 40%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
-}
-
-.gp-stage {
+.kc-hero {
   position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1180px;
-}
-
-.gp-panel {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  align-items: center;
-  min-height: min(620px, 72vh);
-  border-radius: 32px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
-  backdrop-filter: blur(28px) saturate(140%);
-  -webkit-backdrop-filter: blur(28px) saturate(140%);
-  box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-}
-
-.gp-viewer {
-  position: relative;
-  height: 100%;
-  min-height: 420px;
-}
-
-.gp-viewer canvas {
-  cursor: grab;
-}
-
-.gp-viewer-loading {
-  width: 100%;
-  height: 100%;
-}
-
-.gp-controls {
+  z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  padding: clamp(1.75rem, 4vw, 3.5rem);
-  padding-left: clamp(0.5rem, 2vw, 1.5rem);
+  align-items: center;
+  text-align: center;
+  padding: 2.8rem 1.5rem 1.2rem;
 }
 
-.gp-eyebrow {
+.kc-title {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(2.35rem, 4.4vw, 3.45rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.kc-title-brand {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.kc-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.85rem;
+}
+
+.kc-social-icon {
+  color: rgba(255, 255, 255, 0.62);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.kc-social-icon:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.kc-contact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1.65rem;
+}
+
+.kc-chip {
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.kc-chip:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Precision SVG Horizon Arc Section */
+.kc-horizon-section {
+  position: relative;
+  padding-top: 8.2rem;
+  padding-bottom: 3rem;
+}
+
+.kc-horizon-stage {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1360px, 128vw);
+  height: 310px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kc-horizon-ambient {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78%;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 50% 55%,
+    rgba(232, 120, 24, 0.34) 0%,
+    rgba(168, 72, 12, 0.14) 48%,
+    transparent 76%
+  );
+  filter: blur(28px);
+}
+
+.kc-horizon-svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.kc-column {
+  position: relative;
+  z-index: 3;
+  width: min(470px, 90vw);
+  margin: 0 auto;
+}
+
+.kc-lead-heading {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.48rem);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 auto 2.5rem;
+  max-width: 440px;
+}
+
+.kc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.kc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  background: #121212;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.kc-field:focus-within {
+  background: #171717;
+  border-color: rgba(232, 132, 37, 0.42);
+}
+
+.kc-field-label {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.01em;
+}
+
+.kc-req {
+  color: #e87a2e;
+  margin-left: 1px;
+}
+
+.kc-field-input,
+.kc-field-select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.8rem;
+  padding: 0;
+  width: 100%;
+}
+
+.kc-field-select option {
+  background: #121212;
+  color: #f5f0e7;
+}
+
+.kc-field-input::placeholder {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.kc-field-textarea textarea {
+  resize: vertical;
+  min-height: 78px;
+}
+
+.kc-consent {
+  text-align: center;
+  margin: 0.95rem 0 0;
   font-family: var(--font-work-sans), sans-serif;
   font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.kc-consent strong {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+}
+
+.kc-submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.9rem;
+}
+
+.kc-send-btn {
+  border: none;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #09090b;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  padding: 0.68rem 1.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kc-send-btn:hover {
+  background: var(--gold-300);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -8px rgba(242, 199, 92, 0.55);
+}
+
+.kc-divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 4.5rem 0 3.4rem;
+}
+
+.kc-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.kc-info-block h3 {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.95rem;
+}
+
+.kc-info-block p {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.46);
+  margin: 0;
+}
+
+.kc-accent-link {
+  display: inline-block;
+  margin-top: 0.95rem;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #e06d2b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kc-accent-link:hover {
   color: var(--gold-300);
 }
 
-.gp-weight {
+/* Bottom Emblem & Rising Golden Horizon Dome */
+.kc-bottom-glow-section {
+  position: relative;
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  line-height: 1;
-  margin-top: 0.4rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5.5rem 1.5rem 9.5rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
 }
 
-.gp-weight-num {
+.kc-emblem {
+  position: relative;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #2b1d12 0%, #17100a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.kc-closing-statement {
+  position: relative;
+  z-index: 3;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.22rem, 2.15vw, 1.54rem);
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+  color: rgba(255, 255, 255, 0.94);
+  max-width: 450px;
+  margin: 2rem auto 0;
+}
+
+.kc-bottom-dome-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(940px, 118vw);
+  height: 310px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 2%,
+    #000 18%,
+    #000 82%,
+    transparent 98%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 2%,
+    #000 18%,
+    #000 82%,
+    transparent 98%
+  );
+}
+
+.kc-bottom-dome {
+  position: absolute;
+  left: 50%;
+  bottom: -210px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse 58% 55% at 50% 52%,
+    rgba(255, 186, 72, 0.78) 0%,
+    rgba(224, 122, 28, 0.48) 34%,
+    rgba(138, 56, 10, 0.18) 62%,
+    transparent 78%
+  );
+  filter: blur(18px);
+}
+
+.kc-bottom-rays {
+  position: absolute;
+  inset: 40px 10% 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    rgba(255, 196, 98, 0.05) 18px,
+    transparent 36px,
+    rgba(0, 0, 0, 0.12) 56px
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 52% 70% at 50% 100%,
+    #000 10%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 52% 70% at 50% 100%,
+    #000 10%,
+    transparent 75%
+  );
+  filter: blur(4px);
+}
+
+.kc-bottom-core {
+  position: absolute;
+  left: 50%;
+  bottom: -48px;
+  transform: translateX(-50%);
+  width: 58%;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    rgba(255, 215, 128, 0.92) 0%,
+    rgba(242, 148, 38, 0.5) 45%,
+    transparent 78%
+  );
+  filter: blur(14px);
+}
+
+.kc-bottom-baseline {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 184, 82, 0.45) 50%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 640px) {
+  .kc-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
+
+/* ==========================================================================
+   ABOUT PAGE (NEOM & ODINAUT INSPIRED LUXURY SOVEREIGN ARCHITECTURE)
+   ========================================================================== */
+
+.ka-page {
+  position: relative;
+  background: #080706;
+  color: #f5f0e7;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* 1. Full-Bleed Cinematic Hero */
+.ka-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 580px;
+  max-height: 840px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.ka-hero-img {
+  object-fit: cover;
+  object-position: center 38%;
+  filter: brightness(0.68) contrast(1.1);
+  transform: scale(1.02);
+}
+
+.ka-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 7, 6, 0.45) 0%,
+    rgba(8, 7, 6, 0.15) 40%,
+    rgba(8, 7, 6, 0.75) 85%,
+    #080706 100%
+  );
+  z-index: 1;
+}
+
+.ka-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.ka-hero-title {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 0.4rem;
+  line-height: 1.05;
+}
+
+.ka-hero-sub {
   font-family: var(--font-playfair), Georgia, serif;
-  font-size: clamp(3.6rem, 8vw, 6.4rem);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  color: rgba(242, 199, 92, 0.95);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* Breadcrumb Strip */
+.ka-breadcrumb-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #080706;
+  padding: 0.9rem 0;
+}
+
+.ka-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ka-breadcrumbs a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ka-breadcrumbs a:hover {
+  color: var(--gold-300);
+}
+
+.ka-crumb-current {
+  color: var(--gold-300);
   font-weight: 600;
-  letter-spacing: -0.03em;
-  font-variant-numeric: tabular-nums;
+}
+
+/* 2. Odinaut Horizon Arc + NEOM Manifesto Statement */
+.ka-manifesto-section {
+  position: relative;
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+
+.ka-manifesto-text {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+  font-weight: 300;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 880px;
+  margin: 0 auto;
+  letter-spacing: -0.01em;
+}
+
+.ka-manifesto-text strong {
+  font-weight: 600;
+  color: #ffffff;
   background: var(--gold-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.gp-weight-unit {
-  font-family: var(--font-work-sans), sans-serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.7);
+/* 3. NEOM 3 Frosted Pillars Section */
+.ka-pillars-section {
+  position: relative;
+  padding: 7rem 0;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-.gp-mood {
-  margin: 0;
-  font-family: var(--font-playfair), Georgia, serif;
-  font-style: italic;
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.78);
+.ka-pillars-bg {
+  object-fit: cover;
+  filter: brightness(0.38) contrast(1.15);
 }
 
-.gp-mood em {
-  color: var(--gold-300);
-}
-
-.gp-slider-wrap {
-  margin-top: 1.2rem;
-}
-
-.gp-slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
+.ka-pillars-overlay {
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
-    to right,
-    var(--gold-300) 0%,
-    var(--gold-300) var(--p, 0%),
-    rgba(255, 255, 255, 0.18) var(--p, 0%),
-    rgba(255, 255, 255, 0.18) 100%
+    180deg,
+    #080706 0%,
+    rgba(8, 7, 6, 0.4) 40%,
+    rgba(8, 7, 6, 0.4) 60%,
+    #080706 100%
   );
+  z-index: 1;
 }
 
-.gp-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: none;
-  background: var(--gold-gradient);
-  box-shadow: 0 0 0 6px rgba(242, 199, 92, 0.18), 0 6px 18px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+.ka-pillars-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  width: 100%;
 }
 
-.gp-slider::-webkit-slider-thumb:hover,
-.gp-slider:active::-webkit-slider-thumb {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 10px rgba(242, 199, 92, 0.2), 0 6px 18px rgba(0, 0, 0, 0.5);
-}
-
-.gp-slider::-moz-range-thumb {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: none;
-  background: var(--gold-300);
-  box-shadow: 0 0 0 6px rgba(242, 199, 92, 0.18), 0 6px 18px rgba(0, 0, 0, 0.5);
-}
-
-.gp-slider:focus-visible {
-  outline: 2px solid var(--gold-300);
-  outline-offset: 8px;
-}
-
-.gp-slider-scale {
+.ka-pillar-card {
+  background: rgba(18, 14, 11, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 2.8rem 2.2rem;
   display: flex;
-  justify-content: space-between;
-  margin-top: 0.85rem;
+  flex-direction: column;
+  transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
+
+.ka-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(242, 199, 92, 0.35);
+  background: rgba(24, 18, 14, 0.78);
+}
+
+.ka-pillar-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: rgba(242, 199, 92, 0.1);
+  border: 1px solid rgba(242, 199, 92, 0.25);
+  color: var(--gold-300);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.ka-pillar-title {
   font-family: var(--font-work-sans), sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  margin: 0 0 1rem;
 }
 
-.gp-presets {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.6rem;
-}
-
-.gp-preset {
-  border: none;
-  border-radius: 8px;
-  padding: 0.7rem 1.1rem;
+.ka-pillar-desc {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  cursor: pointer;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0 0 2rem;
+  flex: 1;
 }
 
-.gp-preset:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-2px);
+.ka-pillar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--gold-300);
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.gp-preset.active {
-  background: var(--gold-gradient);
-  color: #1a0f05;
+.ka-pillar-btn:hover {
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
-.gp-cta {
-  align-self: flex-start;
-  margin-top: 0.8rem;
-  border-radius: 8px;
-  padding: 0.95rem 1.9rem;
+/* 4. NEOM Story & Allocation Scale Timeline */
+.ka-story-section {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+  min-height: 620px;
+}
+
+.ka-story-bg {
+  object-fit: cover;
+  filter: brightness(0.32);
+}
+
+.ka-story-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #080706 0%,
+    rgba(8, 7, 6, 0.5) 30%,
+    rgba(8, 7, 6, 0.5) 70%,
+    #080706 100%
+  );
+  z-index: 1;
+}
+
+.ka-story-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.ka-story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.ka-story-title {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ka-story-range {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-300);
+  font-weight: 600;
+}
+
+.ka-timeline-rail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.ka-timeline-stop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ka-timeline-label {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 600;
+}
+
+.ka-timeline-dot {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-300), rgba(255, 255, 255, 0.12));
+  border-radius: 2px;
+}
+
+.ka-story-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.ka-story-card {
+  border-radius: 6px;
+  padding: 2.8rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease;
+}
+
+.ka-story-card:hover {
+  transform: translateY(-4px);
+}
+
+.ka-story-card-light {
+  background: #fbf7f0;
+  color: #12100d;
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.75);
+}
+
+.ka-story-card-light .ka-story-card-tag {
+  color: #b87a14;
+}
+
+.ka-story-card-light .ka-story-card-lead {
+  color: #12100d;
+}
+
+.ka-story-card-light .ka-story-card-body {
+  color: #4a453e;
+}
+
+.ka-story-card-glass {
+  background: rgba(18, 14, 11, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ka-story-card-tag {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--gold-300);
+  margin-bottom: 1.2rem;
+}
+
+.ka-story-card-lead {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #ffffff;
+  margin: 0 0 1rem;
+}
+
+.ka-story-card-body {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+/* 5. NEOM Alternating Editorial Split Rows */
+.ka-splits-section {
+  padding: 8rem 0;
+  background: #0c0a08;
+}
+
+.ka-split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+.ka-split-row:last-child {
+  margin-bottom: 0;
+}
+
+.ka-split-row-reverse {
+  direction: ltr;
+}
+
+.ka-split-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.ka-eyebrow {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: var(--gold-300);
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.ka-split-heading {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 1.6rem;
+}
+
+.ka-split-text {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.78;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 1.2rem;
+}
+
+.ka-solid-btn {
+  align-self: flex-start;
+  margin-top: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  background: #ffffff;
+  color: #0c0a08 !important;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #1a0f05;
-  background: var(--gold-gradient);
-  box-shadow: 0 12px 34px -12px rgba(242, 199, 92, 0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.22s, transform 0.22s;
 }
 
-.gp-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 44px -12px rgba(242, 199, 92, 0.8);
+.ka-solid-btn:hover {
+  background: var(--gold-300);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 860px) {
-  .gp-panel {
+.ka-split-media {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+}
+
+.ka-split-media img {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.ka-split-media:hover img {
+  transform: scale(1.03);
+}
+
+/* 6. NEOM Key Regional Hubs Section */
+.ka-hubs-section {
+  padding: 8rem 0;
+  background: #080706;
+}
+
+.ka-hubs-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4.5rem;
+}
+
+.ka-hubs-title {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin: 0.6rem 0 1rem;
+}
+
+.ka-hubs-sub {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.ka-hubs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.ka-hub-card {
+  background: rgba(18, 14, 11, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s, border-color 0.28s;
+}
+
+.ka-hub-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(242, 199, 92, 0.3);
+}
+
+.ka-hub-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+}
+
+.ka-hub-img-wrap img {
+  object-fit: cover;
+}
+
+.ka-hub-body {
+  padding: 1.8rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ka-hub-country {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: var(--gold-300);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.ka-hub-city {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin: 0 0 0.8rem;
+}
+
+.ka-hub-desc {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 1.5rem;
+  flex: 1;
+}
+
+.ka-hub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.ka-hub-btn:hover {
+  color: var(--gold-300);
+  transform: translateX(3px);
+}
+
+/* 7. Interactive Topography as Background for Closing Emblem */
+.ka-topography-section {
+  position: relative;
+  background: #080706;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 6.5rem;
+}
+
+.ka-topography-bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.ka-topography-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(180deg, #080706 0%, rgba(8, 7, 6, 0.7) 40%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ka-topography-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(0deg, #080706 0%, rgba(8, 7, 6, 0.7) 40%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ka-topography-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.ka-topography-content > * {
+  pointer-events: auto;
+}
+
+.ka-closing-statement {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: clamp(1.26rem, 2.3vw, 1.62rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.85);
+  margin: 1.8rem 0 0;
+}
+
+.ka-bridge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ka-pillars-grid,
+  .ka-story-cards,
+  .ka-timeline-rail {
     grid-template-columns: 1fr;
   }
-  .gp-viewer {
-    min-height: 340px;
+  .ka-hubs-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .gp-controls {
-    padding: 0.5rem 1.5rem 2rem;
+  .ka-split-row {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .ka-split-media {
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ka-hubs-grid {
+    grid-template-columns: 1fr;
+  }
+  .ka-hero {
+    height: 65vh;
   }
 }

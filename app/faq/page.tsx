@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "../components/Reveal";
+import JsonLd from "../components/JsonLd";
 import { FAQ, SITE } from "../data";
+import {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+  buildPageMetadata,
+} from "../seo";
 
-export const metadata: Metadata = {
-  title: `Frequently Asked Questions | ${SITE.name}`,
+export const metadata: Metadata = buildPageMetadata({
+  title: "Frequently Asked Questions (FAQ) — Assay, Delivery & Vaulting",
   description:
-    "Find answers to common questions about buying physical gold bars, authenticity certificates, payments, insured delivery, and secure vault storage with Kibali Gold Market.",
-};
+    "Direct answers on buying physical gold bars (1 kg to 10 tn), XRF assay authentication, live spot pricing, international armored shipping, and allocated vault storage with Kibali Gold Enterprise.",
+  path: "/faq",
+  keywords: [
+    "physical gold FAQ",
+    "how is gold bar purity verified XRF",
+    "allocated gold ownership FAQ",
+    "can I inspect my gold vault storage",
+  ],
+});
 
 const DETAILED_FAQS = [
   ...FAQ,
@@ -32,6 +45,13 @@ const DETAILED_FAQS = [
 export default function FAQPage() {
   return (
     <main id="top" className="subpage-content">
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "FAQ", path: "/faq" },
+        ])}
+      />
+      <JsonLd data={buildFaqJsonLd(DETAILED_FAQS, "/faq")} />
       {/* SUBPAGE HERO */}
       <section className="subpage-hero" aria-labelledby="faq-page-title">
         <div className="container">

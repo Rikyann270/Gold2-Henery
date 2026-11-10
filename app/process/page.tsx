@@ -3,17 +3,38 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
+import JsonLd from "../components/JsonLd";
 import { SITE, STEPS } from "../data";
+import {
+  buildBreadcrumbJsonLd,
+  buildHowToJsonLd,
+  buildPageMetadata,
+} from "../seo";
 
-export const metadata: Metadata = {
-  title: `How It Works | ${SITE.name}`,
+export const metadata: Metadata = buildPageMetadata({
+  title: "How It Works — 4-Step Gold Allocation & Tier-IV Vault Custody",
   description:
-    "Learn the 4-step process of buying physical gold with Kibali Gold Market: from live spot price lock to armored delivery or insured vault custody.",
-};
+    "Learn the 4-step process of acquiring physical gold bars (1 kg to 10 tn) with Kibali Gold Enterprise: from live interbank spot lock to insured armored delivery or allocated vault storage in Zurich, Dubai, and London.",
+  path: "/process",
+  ogImage: `${SITE.url}/images/secure-vault.jpg`,
+  keywords: [
+    "how to buy 1 kg gold bar",
+    "allocated gold vault storage Zurich Dubai London",
+    "armored bullion delivery process",
+    "Tier-IV gold vault custody",
+  ],
+});
 
 export default function ProcessPage() {
   return (
     <main id="top" className="subpage-content">
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "How It Works", path: "/process" },
+        ])}
+      />
+      <JsonLd data={buildHowToJsonLd()} />
       {/* SUBPAGE HERO */}
       <section className="subpage-hero" aria-labelledby="process-page-title">
         <div className="container">
