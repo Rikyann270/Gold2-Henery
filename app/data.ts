@@ -10,7 +10,7 @@ export const SITE = {
   domain: "kibaligoldenterprise.com",
   url: "https://kibaligoldenterprise.com",
   tagline: "Certified gold bars from 1 kg to 10 tn. Delivered or vaulted.",
-  email: "sales@kibaligoldenterprise.com",
+  email: "info@kibaligoldenterprise.com",
   phone: "+243 864 556 858",
 };
 
