@@ -39,6 +39,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${BASE_URL}/images/gold-bars-stack2.jpg`],
     },
     {
+      url: `${BASE_URL}/gallery`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      images: [
+        `${BASE_URL}/images/gallery/3A6A1814.jpg`,
+        `${BASE_URL}/images/gallery/3A6A1815.jpg`,
+        `${BASE_URL}/images/gallery/3A6A1816.jpg`,
+        `${BASE_URL}/images/gallery/3A6A1821.jpg`,
+        `${BASE_URL}/images/gallery/3A6A1822.jpg`,
+        `${BASE_URL}/images/gallery/3A6A1823.jpg`,
+      ],
+    },
+    {
       url: `${BASE_URL}/faq`,
       lastModified: now,
       changeFrequency: "weekly",
